@@ -13,13 +13,13 @@ export class UserController
         return this.userService.findByEmail( email );
     } 
 
-    @Post()
+    @Post('/register')
     register(@Body() userDto: UserDto): number
     {
         return 1;
     }
 
-    @Post()
+    @Post('login')
     login(@Body() userDto: UserDto): string
     {
         let token: string = '';
